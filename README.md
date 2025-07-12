@@ -52,9 +52,14 @@ A modern, responsive web application that leverages Google's Gemini AI to provid
 
 3. **Set up your API key**
    
-   Get your Google AI API key from [Google AI Studio](https://aistudio.google.com/) and update the API key in `src/App.jsx`:
-   ```javascript
-   const ai = new GoogleGenAI({ apiKey: "YOUR_API_KEY_HERE" });
+   Get your Google AI API key from [Google AI Studio](https://aistudio.google.com/) and create a `.env` file in the root directory:
+   ```bash
+   cp .env.example .env
+   ```
+   
+   Then edit the `.env` file and replace `your_google_ai_api_key_here` with your actual API key:
+   ```env
+   VITE_GOOGLE_AI_API_KEY=your_actual_api_key_here
    ```
 
 4. **Start the development server**

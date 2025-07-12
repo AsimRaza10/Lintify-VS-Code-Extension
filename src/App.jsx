@@ -91,7 +91,7 @@ const App = () => {
   // Code editor ka data
   const [code, setCode] = useState("");
   // Google GenAI ka instance
-  const ai = new GoogleGenAI({ apiKey: "AIzaSyA8U4Rb7ZExK4WehvsP2Ae8BMmhpdma9WM" });
+  const ai = new GoogleGenAI({ apiKey: import.meta.env.VITE_GOOGLE_AI_API_KEY });
   // Loading spinner dikhane ke liye
   const [loading, setLoading] = useState(false);
   // Review ka response
