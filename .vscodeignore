@@ -7,4 +7,11 @@ vsc-extension-quickstart.md
 **/tsconfig.json
 **/.eslintrc.json
 **/*.map
-**/*.ts 
+**/*.ts
+node_modules/**
+!node_modules/@google/generative-ai/**
+.git/**
+.qodo/**
+public/**
+.env.example
+*.vsix 

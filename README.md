@@ -1,91 +1,117 @@
-# Lintify VS Code Extension
+# 🧠 Lintify VS Code Extension
 
-An AI-powered code review and fixing extension for Visual Studio Code that uses Google's Gemini AI to analyze and improve your code.
+AI-powered code review and fixing for Visual Studio Code, powered by Google Gemini. Lintify helps you write better code, find bugs, and improve code quality in seconds—right inside your editor.
 
-## Features
+---
 
-- **Code Review**: Get detailed analysis of your code including quality ratings, improvement suggestions, and bug identification
-- **Code Fixing**: Automatically fix syntax errors, bugs, and improve code quality
-- **Multiple Languages**: Supports JavaScript, TypeScript, Python, Java, C#, C++, Go, Ruby, PHP, Swift, Kotlin, Rust, and more
-- **Context Menu Integration**: Right-click on selected code to review or fix
-- **Command Palette**: Access all features through VS Code's command palette
-- **Dedicated Panel**: Open a dedicated Lintify panel for easy access
+## ✨ Features
+- **AI Code Review**: Get detailed, actionable reviews for your code in any supported language.
+- **AI Code Fixing**: Instantly fix bugs, syntax errors, and bad practices with a single click.
+- **Model Selection**: Choose between Gemini models (`gemini-pro`, `gemini-1.5-flash`) for best results.
+- **Diff View**: See a side-by-side diff before applying AI-generated fixes.
+- **Review Whole File**: Review an entire file, not just a selection.
+- **Welcome Page**: Helpful onboarding for new users.
+- **Undo Support**: All fixes are undoable (Ctrl+Z).
+- **Output Channel**: Dedicated "Lintify" output channel for logs and troubleshooting.
+- **Emoji Branding**: 🧠 Modern, friendly look and feel.
 
-## Installation
+---
 
-1. Clone this repository
-2. Run `npm install` to install dependencies
-3. Run `npm run compile` to build the extension
-4. Press `F5` in VS Code to launch the extension in a new Extension Development Host window
+## 🚀 Installation
 
-## Setup
+1. **From the VS Code Marketplace**
+   - Open VS Code
+   - Go to Extensions (`Ctrl+Shift+X`)
+   - Search for `Lintify`
+   - Click **Install**
 
-1. Get a Google AI API key from [Google AI Studio](https://makersuite.google.com/app/apikey)
-2. Open VS Code settings (Ctrl+,)
-3. Search for "lintify"
-4. Enter your API key in the "Lintify: Api Key" field
+2. **From a VSIX File**
+   - Download `lintify-vs-1.0.0.vsix`
+   - In VS Code, open Extensions (`Ctrl+Shift+X`)
+   - Click the `...` menu → `Install from VSIX...`
+   - Select the `.vsix` file
 
-## Usage
+---
 
-### Code Review
-1. Select the code you want to review
-2. Right-click and choose "Lintify: Review Code"
-3. Or use the command palette (Ctrl+Shift+P) and search for "Lintify: Review Code"
-4. The review will open in a new markdown document
+## 🛠️ Setup
 
-### Code Fixing
-1. Select the code you want to fix
-2. Right-click and choose "Lintify: Fix Code"
-3. Or use the command palette (Ctrl+Shift+P) and search for "Lintify: Fix Code"
-4. The fixed code will replace your selection
+1. **Get a Google AI API Key**
+   - Go to [Google AI Studio](https://makersuite.google.com/app/apikey)
+   - Sign in and generate an API key
 
-### Open Panel
-1. Use the command palette (Ctrl+Shift+P) and search for "Lintify: Open Panel"
-2. Or click the Lintify icon in the activity bar
+2. **Configure Lintify in VS Code**
+   - Open Settings (`Ctrl+,`)
+   - Search for `Lintify`
+   - Paste your API key into **Lintify: Api Key**
+   - (Optional) Choose your preferred **Gemini model** in **Lintify: Model**
 
-## Commands
+---
 
-- `lintify.reviewCode`: Review selected code
-- `lintify.fixCode`: Fix selected code
-- `lintify.openPanel`: Open the Lintify panel
+## 📝 Usage
 
-## Configuration
+### 1. **Review or Fix Selected Code**
+- Open any code file
+- Select the code you want to review or fix
+- Right-click and choose:
+  - `Lintify: Review Code` (for a detailed AI review)
+  - `Lintify: Fix Code` (for automatic code fixing)
+- Or use the Command Palette (`Ctrl+Shift+P`) and type `Lintify`
 
-- `lintify.apiKey`: Your Google AI API key (required)
+### 2. **Review the Whole File**
+- Open the file you want to review
+- Open the Command Palette (`Ctrl+Shift+P`)
+- Type `Lintify: Review Whole File` and run the command
 
-## Development
+### 3. **Diff View for Fixes**
+- When you use `Lintify: Fix Code`, a side-by-side diff will appear
+- Review the changes and confirm before applying
 
-### Prerequisites
-- Node.js
-- VS Code
-- TypeScript
+### 4. **Welcome Page**
+- On first install, a welcome page will guide you through setup and usage
+- To see it again, run `Lintify: Open Panel` from the Command Palette
 
-### Building
-```bash
-npm install
-npm run compile
-```
+---
 
-### Running
-Press `F5` in VS Code to launch the extension in a new Extension Development Host window.
+## ⚙️ Settings
 
-### Testing
-```bash
-npm run test
-```
+- **Lintify: Api Key**: Your Google AI API key (required)
+- **Lintify: Model**: Choose between `gemini-pro` and `gemini-1.5-flash`
 
-## Contributing
+---
 
-1. Fork the repository
-2. Create a feature branch
-3. Make your changes
-4. Run tests
-5. Submit a pull request
+## 💡 Tips & Best Practices
+- Use the **Output Channel** (`View > Output > Lintify`) for logs and troubleshooting
+- All fixes are undoable—just press `Ctrl+Z` if you want to revert
+- If you see a warning about unsupported languages, results may be less accurate
+- For best results, keep your API key secure and do not share it
 
-## License
+---
 
+## 🐞 Troubleshooting
+
+- **No API Key / Invalid Key**: Set your API key in settings
+- **Model Not Supported**: Change the model in settings to one your API key supports
+- **Quota Exceeded**: Check your Google AI usage/quota
+- **Extension Not Working**: Reload VS Code, check the Output Channel, and ensure your API key is valid
+- **Still Stuck?**: Open an issue on [GitHub](https://github.com/AsimRaza10/Lintify-VS-Code-Extension)
+
+---
+
+## 📝 Changelog
+See [CHANGELOG.md](./CHANGELOG.md) for version history and updates.
+
+---
+
+## 🙋‍♂️ Support & Feedback
+- **GitHub Issues**: [Lintify-VS-Code-Extension](https://github.com/AsimRaza10/Lintify-VS-Code-Extension/issues)
+- **Email**: asimraza10@gmail.com
+- **Marketplace**: [Lintify on VS Code Marketplace](https://marketplace.visualstudio.com/items?itemName=asimraza10.lintify)
+
+---
+
+## 📄 License
 MIT License
 
-## Support
+---
 
-If you encounter any issues or have questions, please open an issue on GitHub. 
+**Thank you for using Lintify! If you love it, please rate and review on the VS Code Marketplace.** 

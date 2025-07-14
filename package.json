@@ -1,8 +1,8 @@
 {
   "name": "lintify-vs",
-  "displayName": "Lintify",
-  "description": "AI-powered code review and fixing extension for VS Code",
-  "version": "0.0.1",
+  "displayName": "🧠 Lintify",
+  "description": "🧠 AI-powered code review and fixing extension for VS Code",
+  "version": "1.0.0",
   "publisher": "asimraza10",
   "repository": {
     "type": "git",
@@ -25,6 +25,7 @@
   "engines": {
     "vscode": "^1.85.0"
   },
+  "icon": "resources/icon.png",
   "categories": [
     "Other"
   ],
@@ -50,6 +51,16 @@
         "command": "lintify.openPanel",
         "title": "Lintify: Open Panel",
         "category": "Lintify"
+      },
+      {
+        "command": "lintify.reviewFile",
+        "title": "Lintify: Review Whole File",
+        "category": "Lintify"
+      },
+      {
+        "command": "lintify.addCode",
+        "title": "Lintify: Add Code",
+        "category": "Lintify"
       }
     ],
     "viewsContainers": {
@@ -57,7 +68,7 @@
         {
           "id": "lintify",
           "title": "Lintify",
-          "icon": "resources/icon.svg"
+          "icon": "resources/icon.png"
         }
       ]
     },
@@ -79,6 +90,9 @@
         {
           "command": "lintify.fixCode",
           "when": "editorHasSelection"
+        },
+        {
+          "command": "lintify.reviewFile"
         }
       ],
       "editor/context": [
@@ -116,8 +130,8 @@
     "publish": "vsce publish"
   },
   "devDependencies": {
-    "@types/vscode": "^1.85.0",
     "@types/node": "18.x",
+    "@types/vscode": "^1.85.0",
     "@typescript-eslint/eslint-plugin": "^6.0.0",
     "@typescript-eslint/parser": "^6.0.0",
     "eslint": "^8.0.0",
