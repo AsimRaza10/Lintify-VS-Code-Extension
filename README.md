@@ -7,9 +7,9 @@ AI-powered code review and fixing for Visual Studio Code, powered by Google Gemi
 ## ✨ Features
 - **AI Code Review**: Get detailed, actionable reviews for your code in any supported language.
 - **AI Code Fixing**: Instantly fix bugs, syntax errors, and bad practices with a single click.
-- **Model Selection**: Choose between Gemini models (`gemini-pro`, `gemini-1.5-flash`) for best results.
 - **Diff View**: See a side-by-side diff before applying AI-generated fixes.
 - **Review Whole File**: Review an entire file, not just a selection.
+- **Add Code**: Generate a function, class, component, test, or helper from a short prompt.
 - **Welcome Page**: Helpful onboarding for new users.
 - **Undo Support**: All fixes are undoable (Ctrl+Z).
 - **Output Channel**: Dedicated "Lintify" output channel for logs and troubleshooting.
@@ -43,7 +43,7 @@ AI-powered code review and fixing for Visual Studio Code, powered by Google Gemi
    - Open Settings (`Ctrl+,`)
    - Search for `Lintify`
    - Paste your API key into **Lintify: Api Key**
-   - (Optional) Choose your preferred **Gemini model** in **Lintify: Model**
+   - Lintify currently uses `gemini-1.5-flash` internally for review and fix requests.
 
 ---
 
@@ -66,7 +66,13 @@ AI-powered code review and fixing for Visual Studio Code, powered by Google Gemi
 - When you use `Lintify: Fix Code`, a side-by-side diff will appear
 - Review the changes and confirm before applying
 
-### 4. **Welcome Page**
+### 4. **Add AI Suggested Code**
+- Open a supported source file
+- Run `Lintify: Add Code` from the Command Palette
+- Choose the kind of code to generate, then describe what it should do
+- Review the generated code before inserting it
+
+### 5. **Welcome Page**
 - On first install, a welcome page will guide you through setup and usage
 - To see it again, run `Lintify: Open Panel` from the Command Palette
 
@@ -75,7 +81,6 @@ AI-powered code review and fixing for Visual Studio Code, powered by Google Gemi
 ## ⚙️ Settings
 
 - **Lintify: Api Key**: Your Google AI API key (required)
-- **Lintify: Model**: Choose between `gemini-pro` and `gemini-1.5-flash`
 
 ---
 
@@ -114,4 +119,4 @@ MIT License
 
 ---
 
-**Thank you for using Lintify! If you love it, please rate and review on the VS Code Marketplace.** 
+**Thank you for using Lintify! If you love it, please rate and review on the VS Code Marketplace.**
